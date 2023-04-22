@@ -9,15 +9,48 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- example to implement icon within p and color it -->
-    <p>
-      <svg class="icon">
-        <use href="./icons/icons.svg#icon-checked" />
-      </svg>
-    </p>
-    <!-- end example -->
-    <!-- example to implement icon using div:after -->
-    <div></div>
-    <!-- end example -->
+    <div class="app">
+      <header class="app__header">
+        <a href="#">
+          <svg class="icon">
+            <use href="./icons/icons.svg#icon-menu" />
+          </svg>
+        </a>
+        <section class="app__header__topnav">
+          <a href="#" class="logo">
+            <img src="./images/logo.png" alt="company logo" />
+          </a>
+          <ul>
+            <li><a href="#" class="active">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">experience</a></li>
+          </ul>
+        </section>
+      </header>
+      <div class="app__main">
+        <ul class="app__main__slider__nav">
+          <li><a href="#" class="ico ico__inactive"></a></li>
+          <li><a href="#" class="ico ico__active"></a></li>
+          <li><a href="#" class="ico ico__inactive"></a></li>
+          <li><a href="#" class="ico ico__inactive"></a></li>
+        </ul>
+        <h1>Take<br /><span>hiking</span></h1>
+        <h2>Landin page</h2>
+        <p class="pitch">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do iusmod
+          tempor incididunt ut labore et dolore magna.
+        </p>
+        <a href="#">Read more</a>
+        <p class="site">www.yoursite.com</p>
+        <section class="app__main__social">
+          <a href="#" class="app__main__social__ico insta">X</a>
+          <a href="#" class="app__main__social__ico face">X</a>
+          <a href="#" class="app__main__social__ico twit">X</a>
+          <a href="#" class="app__main__social__ico tel">X</a>
+        </section>
+        <p class="mail">@yourname</p>
+      </div>
+    </div>
   </body>
 </html>

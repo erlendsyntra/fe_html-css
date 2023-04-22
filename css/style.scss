@@ -3,16 +3,157 @@
 @use "./base/fonts";
 @use "./base/mixins" as *;
 
-/* style to color p icon red */
-p {
-  color: red;
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
-/* style to implement icon within div via after */
-div::after {
-  content: "";
-  left: 0;
-  top: 0;
-  display: block;
-  @include icon("icon-checked", $green, 2rem);
+.app {
+  margin: 0 auto;
+  height: 100vh;
+  // background-image: url("../images/background1.png");
+  // background-size: cover;
+  // background-position: top-center;
+  background-image: url("../images/background2.png"),
+    url("../images/background1.png");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 4.5rem;
+  &__header {
+    margin-left: 12.5rem;
+    margin-right: 14.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    & > a {
+      font-size: 4.7rem;
+      color: $grey;
+      margin-right: 53.5rem;
+    }
+    &__topnav {
+      display: flex;
+      align-items: center;
+      & ul {
+        display: flex;
+        gap: 10.5rem;
+        margin-left: 10.5rem;
+        & li {
+          font-size: 1.9rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          & > a {
+            text-decoration: none;
+            color: black;
+            &:hover,
+            &.active {
+              background-color: $white;
+              padding: 1rem 3.3rem;
+              border-radius: 2.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__main {
+    margin-left: 12.5rem;
+    margin-top: 13.5rem;
+    position: relative;
+    &__slider__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-right: 14.5rem;
+      position: absolute;
+      right: 0;
+      top: 25%;
+      & .ico {
+        width: 3rem;
+        height: 3rem;
+        display: block;
+        &__inactive {
+          @include icon("icon-empty", $white, 1.5rem);
+        }
+        &__active {
+          @include icon("icon-filled", $white, 1.5rem);
+        }
+      }
+    }
+    & h1 {
+      font-size: 11.25rem;
+      font-weight: 800;
+      line-height: 11.25rem;
+      color: $lightbrown;
+      text-transform: uppercase;
+      margin-bottom: 1.3rem;
+      text-shadow: 3px 3px #d3d2d1;
+      & span {
+        color: $grey;
+      }
+    }
+    & h2 {
+      font-size: 3.6rem;
+      color: $lightbrown;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+    & .pitch {
+      font-size: 2.025rem;
+      color: $grey;
+      font-style: italic;
+      line-height: 2.5rem;
+      text-align: justify;
+      width: 30rem;
+      margin-bottom: 4.5rem;
+    }
+    & > a {
+      white-space: nowrap;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $grey;
+      background-color: $lightbrown;
+      margin-left: 1rem;
+      line-height: 3rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1rem 3.3rem;
+      border-radius: 2.9rem;
+    }
+
+    & .site {
+      font-size: 1.6rem;
+      color: $grey;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-top: 5rem;
+    }
+    &__social {
+      margin-left: 1rem;
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 10px;
+      &__ico {
+        text-decoration: none;
+      }
+      & .insta {
+        @include icon("icon-instagram", $grey, 2rem);
+      }
+      & .face {
+        @include icon("icon-facebook", $grey, 2rem);
+      }
+      & .twit {
+        @include icon("icon-twitter", $grey, 2rem);
+      }
+      & .tel {
+        @include icon("icon-whatsapp", $grey, 2rem);
+      }
+    }
+    & .mail {
+      font-size: 1.2rem;
+      margin-left: 3rem;
+      margin-top: 1rem;
+    }
+  }
 }
